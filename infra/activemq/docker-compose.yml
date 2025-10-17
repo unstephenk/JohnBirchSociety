@@ -1,0 +1,11 @@
+services:
+  activemq:
+    image: apache/activemq-classic:5.17.6
+    container_name: activemq
+    ports:
+      - "61616:61616"   # OpenWire
+      - "61613:61613"   # STOMP
+      - "61614:61614"   # STOMP over WebSocket
+      - "8161:8161"     # Web Console
+    restart: unless-stopped
+
