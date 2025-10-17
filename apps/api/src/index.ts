@@ -41,7 +41,7 @@ function connectStomp(): Promise<any> {
           passcode: ACTIVEMQ_PASS,
         },
       },
-      (error, client) => {
+      (error: unknown, client: any) => {
         if (error) return reject(error);
         resolve(client);
       }
